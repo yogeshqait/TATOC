@@ -21,7 +21,7 @@ public class TestFunctions {
 
 	@AfterClass
 	public void terminateBrowser() {
-		//driver.quit();
+		driver.quit();
 	}
 
 	@Test
