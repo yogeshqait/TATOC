@@ -35,10 +35,13 @@ public class TestFunctions {
 		WebElement greenBox = driver.findElement(By.className("greenbox"));
 		greenBox.click();
 		System.out.println(driver.getCurrentUrl());
+		System.out.println("test1 passed");
+
 	}
 
 	@Test(dependsOnMethods = { "gridGate" })
 	public void frameDungeon() {
+		System.out.println("test2 passed");
 		WebDriver mainFrame = driver.switchTo().frame("main");
 		WebElement repaint = driver.findElement(By.linkText("Repaint Box 2"));
 		WebElement answerbox = mainFrame.findElement(By.id("answer"));
@@ -57,6 +60,7 @@ public class TestFunctions {
 		}
 		WebElement next = driver.findElement(By.linkText("Proceed"));
 		next.click();
+		System.out.println("tesyt2 passed");
 	}
 
 	@Test(dependsOnMethods = { "frameDungeon" })
