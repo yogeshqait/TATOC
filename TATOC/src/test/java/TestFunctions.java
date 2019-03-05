@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-//import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestFunctions {
 	public String baseUrl = "http://10.0.1.86/tatoc/basic/grid/gate";
@@ -15,12 +15,12 @@ public class TestFunctions {
 
 	@BeforeClass
 	public void launchBrowser() {
-		//ChromeOptions options = new ChromeOptions();
-        	//options.addArguments("--no-sandbox");
-		//options.addArguments('--headless');
-        	//options.addArguments("--disable-dev-shm-usage");
+		ChromeOptions options = new ChromeOptions();
+        	options.addArguments("--no-sandbox");
+		options.addArguments('--headless');
+        	options.addArguments("--disable-dev-shm-usage");
 		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.get(baseUrl);
 	}
 
