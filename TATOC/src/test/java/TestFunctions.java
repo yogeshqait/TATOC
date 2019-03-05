@@ -20,7 +20,7 @@ public class TestFunctions {
 		//options.addArguments('--headless');
         	//options.addArguments("--disable-dev-shm-usage");
 		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		driver.get(baseUrl);
 	}
 
