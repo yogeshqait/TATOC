@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.chrome.ChromeOptions;
+//import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestFunctions {
 	public String baseUrl = "http://10.0.1.86/tatoc/basic/grid/gate";
