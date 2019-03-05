@@ -17,6 +17,7 @@ public class TestFunctions {
 	public void launchBrowser() {
 		ChromeOptions options = new ChromeOptions();
         	options.addArguments("--no-sandbox");
+		options.setExperimentalOption("useAutomationExtension", false);
 		//options.addArguments("--headless");
         	options.addArguments("--disable-dev-shm-usage");
 		System.setProperty("webdriver.chrome.driver", driverPath);
