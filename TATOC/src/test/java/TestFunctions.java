@@ -99,6 +99,7 @@ public class TestFunctions {
 		driver.manage().addCookie(tokenCookie);
 		WebElement next = driver.findElement(By.linkText("Proceed"));
 		next.click();
+		System.out.println("test last passed");
 	}
 
 }
