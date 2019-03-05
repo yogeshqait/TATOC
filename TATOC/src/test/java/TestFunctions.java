@@ -14,8 +14,11 @@ public class TestFunctions {
 
 	@BeforeClass
 	public void launchBrowser() {
+		ChromeOptions options = new ChromeOptions();
+        	options.addArguments("--no-sandbox");
+        	options.addArguments("--disable-dev-shm-usage");
 		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(options);
 		driver.get(baseUrl);
 	}
 
